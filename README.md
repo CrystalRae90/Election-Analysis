@@ -59,6 +59,8 @@ Jefferson had 10.5% of the votes with 38,855 votes. Denver had 82.8% of the tota
 
 Overall, Denver county had the largest number of votes. They had over 80% of the total votes. This can be shown in the output of the script. 
 
+<kbd>![County_Results.PNG](Resources/County_Results.PNG)<kbd>
+
 - Provide a breakdown of the number of votes and the percentage of the total votes each candidate received.
 - Which candidate won the election, what was their vote count, and what was their percentage of the total votes?
 
