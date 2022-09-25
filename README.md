@@ -35,20 +35,14 @@ To be able to break down the votes by county, we started by creating a list _cou
         # Add to the total vote count
         total_votes = total_votes + 1
 
-        # 3: Extract the county name from each row.
         county_name = row[1]
 
-        # 4a: Write an if statement that checks that the
-        # county does not match any existing county in the county list.
-        if county_name not in county_list:
+         if county_name not in county_list:
 
-            # 4b: Add the existing county to the list of counties.
             county_list.append(county_name)
 
-            # 4c: Begin tracking the county's vote count.
             county_votes[county_name]= 0
 
-        # 5: Add a vote to that county's vote count.
         county_votes[county_name] += 1
 
 The percentages were calculated using the sum of each county's votes divided by the total votes. A variable _cty_votes_ was created to obtain the value for each _county_name_ key for the appropriate percentage. Each value for _cty_votes_ and _total votes_ was given the data type float to ensure we would get appropriate decimals in our calculation. 
@@ -111,7 +105,7 @@ Using a similar method to the county, we were able to obtain the total votes and
 Overall, the results were as follows: 
 
 Charles Casper Stockham had 23.0% of the total votes with 85,213 votes. Diana DeGette had 73.8% of the total votes with 272,892 votes and Raymon Anthony Doane had 3.1% of the total votes with 11,606 votes 
-      
+    
 - Which candidate won the election, what was their vote count, and what was their percentage of the total votes?
       
 Using the previous _for_ loop for eaxh _candidate name_, we take it one step further to determine the winner. We incorporate an _if_ statement to determine who had the most votes and the highest winning percentage. Using those parameters, we are able to redefine the variables _winning_count_, _winning_candidate_, and _winning_percentage_. 
@@ -134,5 +128,12 @@ The winner of the election was Diana DeGette with 272,892 votes, for a total win
    
 <kbd>![Candidate_Results.PNG](Resources/Candidate_Results.PNG)<kbd>      
       
+## Election-Audit Summary
       
-##Election-Audit Summary: In a summary statement, provide a business proposal to the election commission on how this script can be used—with some modifications—for any election. Give at least two examples of how this script can be modified to be used for other elections.
+In a summary statement, provide a business proposal to the election commission on how this script can be used—with some modifications—for any election. Give at least two examples of how this script can be modified to be used for other elections.
+      
+This script overall was an efficient manner in analyzing the votes cast based on our data set. Though it was set up specifically for our data set, we could modify it to fit other elections. The data provided was in common CSV format, but it is possible that the data was presented with other delimiters. In this case we would have to modify the code to specify a delimiter when opening. Using the _reader_ method, we would have to specify the appropriate delimiter. 
+      
+It is also possible to have a more complex data set. In this case, we were provided with the basic level of data, the ballot id, county, and candidate. If we were provided with more columns, we would simply have to modify the indexes selected to grab the data. In the case of county votes, we selected _row[1]_ to indicate it was the second column of our data. The addition of more columns would just require a simple modification to be able to identify the correct index reference to the new appropriate column. 
+      
+Overall, the script functionality is flexible enough to be modified for other elections. Depending on how the data is provided, it would only take minor changes to be able to get the same outcomes.
