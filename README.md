@@ -1,7 +1,7 @@
 # Election-Analysis
 
 ## Overview of Election Audit
-The purpose of the election analysis was to analyze the votes cast and determine the outcome of the election. In order to do this succicently, a python script was run to determine the outcome of the election and summarize accordingly. 
+The purpose of the election analysis was to analyze the votes cast and determine the outcome of the election. In order to do this succinctly, a python script was run to determine the outcome of the election and summarize accordingly. 
 
 ## Election-Audit Results
 - How many votes were cast in this congressional election?
@@ -24,9 +24,9 @@ To begin the analysis, we used python to open and read the data. The file path w
  
 - Provide a breakdown of the number of votes and the percentage of total votes for each county in the precinct.
 
-To be able to break down the votes by county, we started by creating a list _county_list_ to hold the county names as well as a dictionary told hold each county's vote count. Using the appropriate index for the county name, we are able to incorporate an _if_ statement within the _for loop_. In this case as we cylcle through the rows, the _if_ statement checks to see if the county name was in the list previously. If not, then it adds it the list.
+To be able to break down the votes by county, we started by creating a list _county_list_ to hold the county names as well as a dictionary told hold each county's vote count. Using the appropriate index for the county name, we are able to incorporate an _if_ statement within the _for loop_. In this case as we cycle through the rows, the _if_ statement checks to see if the county name was in the list previously. If not, then it adds it the list.
 
-We then are able to utilize the _county_votes_ dictionary to hold the county names as keys and preset their values to 0. As each row cycles through the appropriate key we are able to add 1, thus summing the total number of votes by county. This can be seen below. 
+We then can utilize the _county_votes_ dictionary to hold the county names as keys and preset their values to 0. As each row cycles through the appropriate key we are able to add 1, thus summing the total number of votes by county. This can be seen below. 
 
 
       county_list =[]
@@ -67,9 +67,9 @@ Overall, Denver county had the largest number of votes. They had over 80% of the
 
 - Provide a breakdown of the number of votes and the percentage of the total votes each candidate received.
  
-Using a similar method to the county, we were able to obtain the total votes and percentage for each candidate. _candidate_options_ list was created to hold the list of the candidates and a _candidate_votes_ dictionary was created to hold the candidate name and a corresponding vote count for the value. Using the appropriate index for the candidate name (in this case 2, for column 3), we are able to incorporate another _if_ statement within the _for loop_. In this case as we cylcle through the rows, the _if_ statement checks to see if the candidate name was in the list previously. If not, then it adds it the list. 
+Using a similar method to the county, we were able to obtain the total votes and percentage for each candidate. _candidate_options_ list was created to hold the list of the candidates and a _candidate_votes_ dictionary was created to hold the candidate name and a corresponding vote count for the value. Using the appropriate index for the candidate name (in this case 2, for column 3), we are able to incorporate another _if_ statement within the _for loop_. In this case as we cycle through the rows, the _if_ statement checks to see if the candidate name was in the list previously. If not, then it adds it the list. 
 
-We then are able to utilize the _candidate_votes_ dictionary to hold the candidate names as keys and preset their values to 0. As each row cycles through the appropriate key we are able to add 1, thus summing the total number of votes by candidates. Finally we are able to similarly tally the voes to calculate the total votes and corresponding percentage  This can be seen below. 
+We then can utilize the _candidate_votes_ dictionary to hold the candidate names as keys and preset their values to 0. As each row cycles through the appropriate key we are able to add 1, thus summing the total number of votes by candidates. Finally, we are able to similarly tally the votes to calculate the total votes and corresponding percentage  This can be seen below. 
 
       
       # Candidate Options and candidate votes.
@@ -111,7 +111,7 @@ Charles Casper Stockham had 23.0% of the total votes with 85,213 votes. Diana De
     
 - Which candidate won the election, what was their vote count, and what was their percentage of the total votes?
       
-Using the previous _for_ loop for eaxh _candidate name_, we take it one step further to determine the winner. We incorporate an _if_ statement to determine who had the most votes and the highest winning percentage. Using those parameters, we are able to redefine the variables _winning_count_, _winning_candidate_, and _winning_percentage_. 
+Using the previous _for_ loop for each _candidate name_, we take it one step further to determine the winner. We incorporate an _if_ statement to determine who had the most votes and the highest winning percentage. Using those parameters, we are able to redefine the variables _winning_count_, _winning_candidate_, and _winning_percentage_. 
       
        for candidate_name in candidate_votes:
 
